@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
 const path = require('path');
+
+PORT = process.env.PORT || 8080;
 
 const app = express();
 
@@ -9,12 +10,12 @@ let books = [];
 
 
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/book.html'));
-});
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname + '/book.html'));
+// });
 
 app.post('/book', (req, res) => {
     
@@ -31,5 +32,4 @@ app.get('/books', (req, res) => {
 });
 
 
-PORT = process.env.PORT || 8080;
 app.listen(PORT)
