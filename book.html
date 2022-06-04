@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Book</title>
+</head>
+<body class="d-flex justify-content-center">
+    <div class="container">
+        <hr>
+        <h1 class="text-center">Add New Book</h1>
+        <hr>
+    
+        <form action="http://localhost:8080/book" method="POST">
+            <div class="row mb-3">
+                <label for="BookName" class="col-sm-2 col-form-label col-form-label-sm">BookName</label>
+                <div class="col-sm-10">
+                  <input name="bookname" class="form-control form-control-sm" id="colFormLabelSm" placeholder= "Book-Name">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="Price" class="col-sm-2 col-form-label col-form-label-sm">Price</label>
+                <div class="col-sm-10">
+                  <input name="price" class="form-control form-control-sm" id="colFormLabelSm" placeholder= "Price">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="ISBN" class="col-sm-2 col-form-label col-form-label-sm">ISBN</label>
+                <div class="col-sm-10">
+                  <input name="isbn" class="form-control form-control-sm" id="colFormLabelSm" placeholder= "ISBN">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="AuthorName" class="col-sm-2 col-form-label col-form-label-sm">AuthorName</label>
+                <div class="col-sm-10">
+                  <input name="authorname" class="form-control form-control-sm" id="colFormLabelSm" placeholder= "Author-Name">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="PublisherName" class="col-sm-2 col-form-label col-form-label-sm">PublisherName</label>
+                <div class="col-sm-10">
+                  <input name="publishername" class="form-control form-control-sm" id="colFormLabelSm" placeholder= "Publisher-Name">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="PublisherDate" class="col-sm-2 col-form-label col-form-label-sm">PublisherDate</label>
+                <div class="col-sm-10">
+                  <input name="publisherdate" class="form-control form-control-sm" id="colFormLabelSm" placeholder= "Publisher-Date">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="Edition" class="col-sm-2 col-form-label col-form-label-sm">Edition</label>
+                <div class="col-sm-10">
+                  <input name="edition" class="form-control form-control-sm" id="colFormLabelSm" placeholder= "Edition">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="book-api.js"></script>
+</body>
+</html>
